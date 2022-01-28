@@ -6,7 +6,7 @@ const Navigation = () => {
 
 	return (
 		<div>
-			<Navbar bg="light" expand="lg">
+			<Navbar bg="lightblue" expand="lg">
 				<Container fluid>
 					<Navbar.Brand href="Home">👗</Navbar.Brand>
 					<Nav.Link href="clothes">Clothes</Nav.Link>

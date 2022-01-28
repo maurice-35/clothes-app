@@ -19,6 +19,7 @@ const ClotheShow = () => {
 	
 		return (
 			<Card style={{ width: '30rem' }}>
+				<Card.Img variant="top" src="https://static.zara.net/photos///2021/V/0/1/p/3653/003/800/2/w/1140/3653003800_1_1_1.jpg?ts=1606920274038" />
 				<Card.Body>
 					<Card.Title>Clothe Title</Card.Title>
 					<Card.Text>
