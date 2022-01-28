@@ -18,7 +18,20 @@ const ClotheShow = () => {
 		}, [])
 	
 		return (
-			<div>ClotheShow</div>
+			<Card style={{ width: '30rem' }}>
+				<Card.Body>
+					<Card.Title>Clothe Title</Card.Title>
+					<Card.Text>
+						Description
+					</Card.Text>
+				</Card.Body>
+				<ListGroup className="list-group-flush">
+					<ListGroupItem>Name:</ListGroupItem>
+					<ListGroupItem>User Name:</ListGroupItem>
+					<ListGroupItem>Price:</ListGroupItem>
+					<ListGroupItem>Comment:</ListGroupItem>
+				</ListGroup>
+			</Card>
 		)
 }
 
