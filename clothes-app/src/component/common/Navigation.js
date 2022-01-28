@@ -6,15 +6,15 @@ const Navigation = () => {
 
 	return (
 		<div>
-			<Navbar bg="lightblue" expand="lg">
-				<Container fluid>
+			<Navbar expand="lg">
+				<Container fluid> 
 					<Navbar.Brand href="Home">👗</Navbar.Brand>
 					<Nav.Link href="clothes">Clothes</Nav.Link>
 					<Form className="d-flex">
 						<FormControl
 							type="search"
 							placeholder="Search"
-							className="me-2"
+							className="me-"
 							aria-label="Search"
 						/>
 						<Button variant="outline-success">Search</Button>
