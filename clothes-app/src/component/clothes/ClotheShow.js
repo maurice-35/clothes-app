@@ -46,7 +46,7 @@ const ClotheShow = () => {
 									<Card.Title>{clothe.title}</Card.Title>
 									<Card.Text>
 										<div ref={ref}>
-											<Button onClick={handleClick}>{clothe.description}</Button>
+											Description<Button variant="outline-success" id="button" onClick={handleClick}>Click me!</Button>
 											<Overlay
 												show={show}
 												target={target}
@@ -57,7 +57,7 @@ const ClotheShow = () => {
 												<Popover id="popover-contained">
 													<Popover.Header as="h3">Hello!</Popover.Header>
 													<Popover.Body>
-														<strong>Description:</strong> This is a pretty nice collection for a young couple.
+														<strong>{clothe.description}</strong> 
 													</Popover.Body>
 												</Popover>
 											</Overlay>
@@ -65,10 +65,10 @@ const ClotheShow = () => {
 									</Card.Text>
 								</Card.Body>
 								<ListGroup className="list-group-flush">
-									<ListGroupItem>Name:{clothe.name}</ListGroupItem>
-									<ListGroupItem>User Name:{clothe.userName}</ListGroupItem>
-									<ListGroupItem>Price:{clothe.price}</ListGroupItem>
-									<ListGroupItem>Comment:{clothe.comment}</ListGroupItem>
+									<ListGroupItem>Name: {clothe.name}</ListGroupItem>
+									<ListGroupItem>User Name: {clothe.userName}</ListGroupItem>
+									<ListGroupItem>Price: £{clothe.price}</ListGroupItem>
+									<ListGroupItem>Comment: {clothe.comment}</ListGroupItem>
 								</ListGroup>
 							</>
 						))}
