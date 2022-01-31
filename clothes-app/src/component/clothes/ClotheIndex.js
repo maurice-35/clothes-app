@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import { Card, Row, Col } from 'react-bootstrap'
+import { Card, Row, CardGroup } from 'react-bootstrap'
 import ClotheCard from './ClotheCard'
 
 
@@ -24,28 +24,29 @@ const ClotheIndex = () => {
 		getData()
 	}, [])
 
-	console.log("dress", dress)
 
 	return (
 		<div className="section">
 			<Row className="grid-container">
-					<Col className="col-md-6">
-						
-							{dress ?
-										<Card.Text>
-											{dress.map(clothe => (
-												<ClotheCard key={clothe.id} {...clothe} />
-											))}
-										</Card.Text>
-								:
-								<h2 className="index">
-									{hasError ? 'Something went wrong' : '...loading'}
-								</h2>
-							}
-						
-					</Col>
-					</Row>
-			</div>
+				<CardGroup>
+					<Card>
+						{dress ?
+							<CardGroup>
+							<Card>
+								{dress.map(clothe => (
+									<ClotheCard key={clothe.id} {...clothe} />
+								))}
+							</Card>
+							</CardGroup>
+							:
+							<h2 className="index">
+								{hasError ? 'Something went wrong' : '...loading'}
+							</h2>
+						}
+					</Card>
+				</CardGroup>
+			</Row>
+		</div>
 	)
 }
 

@@ -18,14 +18,6 @@ body {
 	align-items: center;
 }
 
-.grid-container {
-	display: grid;
-	justify-items: center;
-	font-size: 1.5rem;
-	font-style: italic;
-}
-
-
 .card.body {
 	color: lightblue;
 }
