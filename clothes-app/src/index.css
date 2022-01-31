@@ -7,16 +7,19 @@ body {
 	margin: 1rem;
 }
 
-.card {
-	display: flex;
-	flex-direction: column;
-	background-color:  #6c7e6c;
-	font-weight: bold;
-	margin: 3rem;
+.input-group.md-form.form-sm.form-1 {
+	border: 1px solid #bdbdbd;
+	border-top-right-radius: 0.25rem;
+	border-bottom-right-radius: 0.25rem;
 }
+
 
 .card.body {
 	color: lightblue;
+}
+
+.cardGroup {
+	display: inline-block;
 }
 
 .card>.list-group:last-child  {
@@ -24,6 +27,7 @@ body {
 	font-style: italic;
 	font-weight: bold;
 }
+
 
 .container {
 	height: 100vh;
