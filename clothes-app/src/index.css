@@ -13,13 +13,21 @@ body {
 	border-bottom-right-radius: 0.25rem;
 }
 
+.container2 {
+	margin: 5px;
+	align-items: center;
+}
+
+.grid-container {
+	display: grid;
+	justify-items: center;
+	font-size: 1.5rem;
+	font-style: italic;
+}
+
 
 .card.body {
 	color: lightblue;
-}
-
-.cardGroup {
-	display: inline-block;
 }
 
 .card>.list-group:last-child  {
@@ -27,7 +35,6 @@ body {
 	font-style: italic;
 	font-weight: bold;
 }
-
 
 .container {
 	height: 100vh;

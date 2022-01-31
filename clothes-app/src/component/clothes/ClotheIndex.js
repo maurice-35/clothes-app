@@ -1,17 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import { Card } from 'react-bootstrap'
+import { Card, Row, Col } from 'react-bootstrap'
 import ClotheCard from './ClotheCard'
 
 
 
 const ClotheIndex = () => {
 	const [dress, setDress] = useState([])
-	// const [show, setShow] = useState(false)
 	const [hasError, setHasError] = useState(false)
-	// const [target, setTarget] = useState(null)
-	// const ref = useRef(null);
-
 
 
 
@@ -31,21 +27,25 @@ const ClotheIndex = () => {
 	console.log("dress", dress)
 
 	return (
-		<div className="row">
-			<div className="col-md-6">
-				{dress ?
-					<Card.Text>
-						{dress.map(clothe => (
-							<ClotheCard key={clothe.id} {...clothe} />
-						))}
-					</Card.Text>
-					:
-					<h2 className="index">
-						{hasError ? 'Something went wrong' : '...loading'}
-					</h2>
-				}
+		<div className="section">
+			<Row className="grid-container">
+					<Col className="col-md-6">
+						
+							{dress ?
+										<Card.Text>
+											{dress.map(clothe => (
+												<ClotheCard key={clothe.id} {...clothe} />
+											))}
+										</Card.Text>
+								:
+								<h2 className="index">
+									{hasError ? 'Something went wrong' : '...loading'}
+								</h2>
+							}
+						
+					</Col>
+					</Row>
 			</div>
-		</div>
 	)
 }
 
