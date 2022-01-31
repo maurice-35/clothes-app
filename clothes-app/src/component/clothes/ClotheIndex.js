@@ -26,13 +26,13 @@ const ClotheIndex = () => {
 
 
 	return (
-		<div className="section">
+		<div>
 			<Row className="grid-container">
 				<CardGroup>
 					<Card>
 						{dress ?
 							<CardGroup>
-							<Card>
+							<Card style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gridGap: 20 }}>
 								{dress.map(clothe => (
 									<ClotheCard key={clothe.id} {...clothe} />
 								))}
