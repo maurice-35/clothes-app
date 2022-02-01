@@ -26,7 +26,6 @@ const Navigation = () => {
 				</Container>
 			</nav>
 		</Navbar>
-
 	)
 }
 
