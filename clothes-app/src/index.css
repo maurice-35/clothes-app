@@ -1,5 +1,5 @@
 body {
-	background-color: rgba(0, 0, 0, 0.212)
+	background-color: rgba(0, 0, 0, 0.212);
 }
 
 .container-fluid {
@@ -66,8 +66,8 @@ div.col {
 	margin: 2rem;
 }
 
-/* div.card {
-	@media (max-width: 600px) {
-    repeat(2, 1fr);
-  }
-} */
+div#dress-map.card {
+	display: grid; 
+		grid-template-columns: repeat(3, 1fr); 
+		grid-gap: 2rem;
+}
