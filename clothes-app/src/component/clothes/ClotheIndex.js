@@ -10,8 +10,6 @@ const ClotheIndex = () => {
 	const [hasError, setHasError] = useState(false)
 
 
-
-
 	useEffect(() => {
 		const getData = async () => {
 			try {

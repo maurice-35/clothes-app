@@ -22,7 +22,7 @@ body {
 	color: lightblue;
 }
 
-.card>.list-group:last-child  {
+.card-footer:last-child  {
 	font-size: large;
 	font-style: italic;
 	font-weight: bold;
@@ -31,7 +31,7 @@ body {
 .container {
 	height: 100vh;
 	margin: 20px auto;
-	background-color: rgb(199, 146, 146);
+	background-color: rgb(146, 199, 194);
 	padding: 15px 35px;
 	border-radius: 1.5em;
 	max-width: 70em;
@@ -56,4 +56,11 @@ h1 {
 .footer {
 	width: 100vw;
 	background-color: lightblue;
+}
+
+div.col {
+	display: grid;
+	justify-content: center;
+	padding-top: 2rem;
+	margin: 2rem;
 }

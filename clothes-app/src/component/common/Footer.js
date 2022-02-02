@@ -1,9 +1,5 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
-import { Card, Row, Col } from 'react-bootstrap'
-// import { GrLinkedin } from 'react-icons/GrLinkedin'
-// import { bi bi-linkedin } from 'react-bootstrap-icons'
-import TextWrapper from 'react-dom'
+import { Row, Col } from 'react-bootstrap'
 
 const Footer = () => {
 	return (
