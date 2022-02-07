@@ -35,6 +35,7 @@ body {
 	padding: 15px 35px;
 	border-radius: 1.5em;
 	max-width: 70em;
+	background-image: url('https://image.freepik.com/free-vector/stylish-hexagonal-line-pattern-background_1017-19742.jpg?w=900')
 }
 
 h1 {
@@ -49,7 +50,7 @@ h1 {
 #button {
 	display: flex;
 	width: 6rem;
-	color: #ebeb8b
+	color: #196403
 
 }
 
@@ -64,10 +65,13 @@ div.col {
 	justify-content: center;
 	padding-top: 2rem;
 	margin: 2rem;
+	background-image: url('https://image.freepik.com/free-vector/stylish-hexagonal-line-pattern-background_1017-19742.jpg?w=900');
 }
 
 div#dress-map.card {
 	display: grid; 
-		grid-template-columns: repeat(3, 1fr); 
-		grid-gap: 2rem;
+	grid-template-columns: repeat(3, 1fr); 
+	grid-gap: 2rem;
+	background-image: url('https://image.freepik.com/free-vector/stylish-hexagonal-line-pattern-background_1017-19742.jpg?w=900');
+	padding-top: 10rem;
 }
