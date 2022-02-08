@@ -56,7 +56,7 @@ const Navigation = () => {
 				<Container fluid>
 					<Navbar.Brand href="/Home">👗</Navbar.Brand>
 					<Nav.Link href="/clothes">Clothes</Nav.Link>
-					<MDBCol md="6">
+					<MDBCol md="4">
 						<div className="input-group md-form form-sm form-1 pl-0" {...filteredData.map((value, index) => {
 							return (
 								<div>

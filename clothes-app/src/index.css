@@ -2,8 +2,13 @@ body {
 	background-color: rgba(0, 0, 0, 0.212);
 }
 
+nav.navbar.fixed-top.navbar {
+	background-image: url('https://image.freepik.com/free-vector/botanical-floral-illustration_53876-80418.jpg?w=740');
+	
+}
+
 .container-fluid {
-	background-color: lightblue;
+	background-color: #f3efef;
 	margin: 1rem;
 }
 
@@ -35,7 +40,7 @@ body {
 	padding: 15px 35px;
 	border-radius: 1.5em;
 	max-width: 70em;
-	background-image: url('https://image.freepik.com/free-vector/stylish-hexagonal-line-pattern-background_1017-19742.jpg?w=900')
+	background-image: url('https://image.freepik.com/free-vector/pink-floral-patterned-background-vector_53876-85184.jpg?w=740')
 }
 
 h1 {
@@ -56,7 +61,7 @@ h1 {
 
 .footer {
 	width: 100vw;
-	background-color: lightblue;
+	background-color: #f3efef;
 	justify-content: space-evenly;
 }
 
