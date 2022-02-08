@@ -1,10 +1,15 @@
 body {
 	background-color: rgba(0, 0, 0, 0.212);
+	font-family: 'Permanent Marker', cursive;
 }
 
 nav.navbar.fixed-top.navbar {
 	background-image: url('https://image.freepik.com/free-vector/botanical-floral-illustration_53876-80418.jpg?w=740');
 	
+}
+
+a.navbar-brand {
+	font-size: 3em;
 }
 
 .container-fluid {
@@ -52,6 +57,10 @@ h1 {
 	letter-spacing: 2px;
 }
 
+div span.logo-emoji {
+	font-size: 3em;
+}
+
 #button {
 	display: flex;
 	width: 6rem;
@@ -63,6 +72,11 @@ h1 {
 	width: 100vw;
 	background-color: #f3efef;
 	justify-content: space-evenly;
+	background-image: url('https://image.freepik.com/free-vector/botanical-floral-illustration_53876-80418.jpg?w=740');
+}
+
+p.footer-icon {
+	font-size: 3em;
 }
 
 div.col {
@@ -75,6 +89,7 @@ div.col {
 
 div#dress-map.card {
 	display: grid; 
+	align-items: center;
 	grid-template-columns: repeat(3, 1fr); 
 	grid-gap: 2rem;
 	background-image: url('https://image.freepik.com/free-vector/stylish-hexagonal-line-pattern-background_1017-19742.jpg?w=900');
