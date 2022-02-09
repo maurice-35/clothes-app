@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react'
-import { Navbar, Container, Nav } from 'react-bootstrap'
+import { Navbar, Container, Nav, Card } from 'react-bootstrap'
 import { MDBCol } from 'mdbreact'
 import axios from 'axios'
 import Search from '../clothes/Search'
+
 
 
 
@@ -62,7 +63,7 @@ const Navigation = () => {
 						<div>
 							<Search />
 								{filteredData.map((filter) => (
-									<li key={filter.id}>{filter.title}</li>
+									<Card key={filter.id}>{filter.title}</Card>
 								))} 
 						</div>
 					</MDBCol>

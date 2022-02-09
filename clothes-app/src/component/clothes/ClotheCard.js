@@ -2,7 +2,7 @@ import React from 'react'
 import { Card } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
-export const ClotheCard = ({ id, img, title, name }) => {
+const ClotheCard = ({ id, img, title, name }) => {
 
 	return (
 		<div className="container2">

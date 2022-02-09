@@ -2,8 +2,8 @@ import React from 'react'
 import { Button } from 'react-bootstrap'
 
 
-const Search = () => {
-
+const Search = ({ title}) => {
+  
 
   const handleSubmit = (event) => {
     event.preventDefault()
@@ -13,7 +13,10 @@ const Search = () => {
 
   return(
     <>
-    <Button href="/clothe/:id" onSubmit={handleSubmit} variant="outline-success">search</Button>
+    <Button href={`/clothes/${title}`}
+    onSubmit={handleSubmit} 
+    variant="outline-success">search
+    </Button>
     </>
   )
 }
