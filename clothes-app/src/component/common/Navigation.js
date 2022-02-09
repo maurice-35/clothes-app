@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Navbar, Container, Nav } from 'react-bootstrap'
 import { MDBCol } from 'mdbreact'
 import axios from 'axios'
-import { Button } from 'react-bootstrap'
+import Search from '../clothes/Search'
 
 
 
@@ -38,18 +38,6 @@ const Navigation = () => {
 	}
 
 
-	const handleSubmit = (event) => {
-  event.preventDefault()
-		// console.log(e.target.element.title.value)
-    console.log(event.target.title.value)
-		if('result' === 'title') {
-			return true
-		} else {
-			return "No Matches"
-		}
-  }
-
-
 	return (
 		<Navbar expand="lg">
 			<nav className="navbar fixed-top navbar-light bg-light">
@@ -72,7 +60,10 @@ const Navigation = () => {
 								placeholder="Search" arial-label="Search" />
 						</div>
 						<div>
-							<Button onSubmit={handleSubmit} variant="outline-success">search</Button>
+							<Search />
+								{filteredData.map((filter) => (
+									<li key={filter.id}>{filter.title}</li>
+								))} 
 						</div>
 					</MDBCol>
 					<Nav.Link href="/Home">Home</Nav.Link>

@@ -5,6 +5,7 @@ import ClotheIndex from './component/clothes/ClotheIndex'
 import ClotheShow from './component/clothes/ClotheShow'
 import Navigation from './component/common/Navigation'
 import Footer from './component/common/Footer'
+import Search from './component/clothes/Search'
 
 
 
@@ -15,6 +16,7 @@ const App = () => {
     <BrowserRouter>
       <Navigation />
       <Routes>
+        <Route exact path='/search' element={ <Search />} />
         <Route exact path='/clothes/:id' element={ <ClotheShow />} />
         <Route exact path='/clothes' element={ <ClotheIndex />} />
         <Route exact path='/Home' element={ <Home /> } />

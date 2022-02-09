@@ -1,6 +1,6 @@
 body {
 	background-color: rgba(0, 0, 0, 0.212);
-	font-family: 'Permanent Marker', cursive;
+	font-family: 'Permanent Marker', cursive, sans-serif;
 }
 
 nav.navbar.fixed-top.navbar {
@@ -95,4 +95,8 @@ div#dress-map.card {
 	grid-gap: 2rem;
 	background-image: url('https://image.freepik.com/free-vector/stylish-hexagonal-line-pattern-background_1017-19742.jpg?w=900');
 	padding-top: 10rem;
+}
+
+input.form-control.my-0.py-1 {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
