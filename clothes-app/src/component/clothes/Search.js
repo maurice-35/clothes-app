@@ -2,19 +2,21 @@ import React from 'react'
 import { Button } from 'react-bootstrap'
 
 
-const Search = ({ title}) => {
+
+const Search = (props) => {
   
 
   const handleSubmit = (event) => {
     event.preventDefault()
       console.log(event.target.title.value)
+      props.onSearch('hi')
     }
 
 
   return(
     <>
-    <Button href={`/clothes/${title}`}
-    onSubmit={handleSubmit} 
+    <Button
+    onClick={handleSubmit} 
     variant="outline-success">search
     </Button>
     </>

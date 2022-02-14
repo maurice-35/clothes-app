@@ -8,7 +8,7 @@ import Search from '../clothes/Search'
 
 
 
-const Navigation = () => {
+const Navigation = (props) => {
 	const [search, setSearch] = useState([])
 	const [filteredData, setFilteredData] = useState(search)
 	
@@ -24,10 +24,13 @@ const Navigation = () => {
 			}
 		}
 		getData()
-	}, [])
+	}, [filteredData])
 
 
 	const handleSearch = (event) => {
+		if (event.target.value === '') {
+			setFilteredData([])
+		} else {
 		let value = event.target.value.toUpperCase()
 		let result = []
 		console.log(value)
@@ -35,8 +38,10 @@ const Navigation = () => {
 			return data.title.search(value) !== -1
 		})
 		setFilteredData(result)
+		props.searchResults(result)
 		console.log(result)
 	}
+}
 
 
 	return (
@@ -61,7 +66,7 @@ const Navigation = () => {
 								placeholder="Search" arial-label="Search" />
 						</div>
 						<div>
-							<Search />
+							<Search onSearch={props.onSearch} />
 								{filteredData.map((filter) => (
 									<Card key={filter.id}>{filter.title}</Card>
 								))} 

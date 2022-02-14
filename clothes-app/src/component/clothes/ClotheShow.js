@@ -37,6 +37,7 @@ const ClotheShow = () => {
 				<Col>
 					<Card.Img variant="top" src={clothe.img} alt={clothe.name} /><Card.Body>
 						<Card.Title>{clothe.title}</Card.Title>
+						<div>
 						<Card.Text>
 							<div ref={ref}>
 								Description<Button variant="outline-success" id="button" onClick={handleClick}>Click me!</Button>
@@ -56,6 +57,7 @@ const ClotheShow = () => {
 								</Overlay>
 							</div>
 						</Card.Text>
+						</div>
 					</Card.Body>
 					<Card.Footer>
 						<small className="text">Name: {clothe.name}</small><br />
