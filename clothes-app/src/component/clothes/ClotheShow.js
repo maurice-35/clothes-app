@@ -17,6 +17,7 @@ const ClotheShow = () => {
 		const getData = async () => {
 			try {
 				const { data } = await axios.get(`https://5fd9d76f6cf2e7001737ead3.mockapi.io/api/v1/dress/${id}`)
+				console.log('Data', data)
 				setClothe(data)
 			} catch (err) {
 			}
@@ -35,28 +36,29 @@ const ClotheShow = () => {
 		<section>
 			<div>
 				<Col>
-					<Card.Img variant="top" src={clothe.img} alt={clothe.name} /><Card.Body>
+					<Card.Img variant="top" src={clothe.img} alt={clothe.name} />
+					<Card.Body>
 						<Card.Title>{clothe.title}</Card.Title>
 						<div>
-						<Card.Text>
-							<div ref={ref}>
-								Description<Button variant="outline-success" id="button" onClick={handleClick}>Click me!</Button>
-								<Overlay
-									show={show}
-									target={target}
-									placement="right"
-									container={ref}
-									containerPadding={20}
-								>
-									<Popover id="popover-contained">
-										<Popover.Header as="h3">Hello!</Popover.Header>
-										<Popover.Body>
-											<strong>{clothe.description}</strong>
-										</Popover.Body>
-									</Popover>
-								</Overlay>
-							</div>
-						</Card.Text>
+							<Card.Text>
+								<div ref={ref}>
+									Description<Button variant="outline-success" id="button" onClick={handleClick}>Click me!</Button>
+									<Overlay
+										show={show}
+										target={target}
+										placement="right"
+										container={ref}
+										containerPadding={20}
+									>
+										<Popover id="popover-contained">
+											<Popover.Header as="h3">Hello!</Popover.Header>
+											<Popover.Body>
+												<strong>{clothe.description}</strong>
+											</Popover.Body>
+										</Popover>
+									</Overlay>
+								</div>
+							</Card.Text>
 						</div>
 					</Card.Body>
 					<Card.Footer>

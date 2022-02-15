@@ -1,11 +1,27 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import ClotheShow from './ClotheShow'
 
-const ClotheFilter = (props)  => {
-	console.log('props', props.filtered[0].description)
-	
-	
+
+const ClotheFilter = (props) => {
+	console.log('props', props.filtered)
+	const [clothes, setClothes] = useState(false)
+
+
+	useEffect(() => {
+		if (props.filtered.filtered === 'No matched searches') {
+			setClothes(false)
+			console.log('Here')
+		} else {
+			setClothes(props.filtered)
+		}
+	}, [props.filtered])
+
+
 	return (
-		<div className='hi'> {props.filtered.map(item => item.description)} </div>
+		<>
+			{!clothes ? <p classname='hi'>No results</p> : <div className='hi'>
+				{props.filtered.map(item => item.price)}	</div>}
+		</>
 	)
 }
 

@@ -11,7 +11,7 @@ import Search from '../clothes/Search'
 const Navigation = (props) => {
 	const [search, setSearch] = useState([])
 	const [filteredData, setFilteredData] = useState(search)
-	
+
 
 	useEffect(() => {
 		const getData = async () => {
@@ -24,24 +24,28 @@ const Navigation = (props) => {
 			}
 		}
 		getData()
-	}, [filteredData])
+	}, [])
 
 
 	const handleSearch = (event) => {
 		if (event.target.value === '') {
 			setFilteredData([])
 		} else {
-		let value = event.target.value.toUpperCase()
-		let result = []
-		console.log(value)
-		result = search.filter((data) => {
-			return data.title.search(value) !== -1
-		})
-		setFilteredData(result)
-		props.searchResults(result)
-		console.log(result)
+			let value = event.target.value.toUpperCase()
+			let result = []
+			console.log(value)
+			result = search.filter((data) => {
+				return data.title.search(value) !== -1
+			})
+			setFilteredData(result)
+			if (result.length === 0) {
+				props.searchResults(false)
+			} else {
+				props.searchResults(result)
+			}
+			console.log('result', result.length)
+		}
 	}
-}
 
 
 	return (
@@ -67,9 +71,9 @@ const Navigation = (props) => {
 						</div>
 						<div>
 							<Search onSearch={props.onSearch} />
-								{filteredData.map((filter) => (
-									<Card key={filter.id}>{filter.title}</Card>
-								))} 
+							{filteredData.map((filter) => (
+								<Card key={filter.id}>{filter.title}</Card>
+							))}
 						</div>
 					</MDBCol>
 					<Nav.Link href="/Home">Home</Nav.Link>

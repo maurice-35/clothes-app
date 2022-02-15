@@ -4,21 +4,21 @@ import { Button } from 'react-bootstrap'
 
 
 const Search = (props) => {
-  
+
 
   const handleSubmit = (event) => {
     event.preventDefault()
-      console.log(event.target.title.value)
-      props.onSearch('hi')
-    }
+    console.log(event.target.title.value)
+    props.onSearch('hi')
+  }
 
 
-  return(
+  return (
     <>
-    <Button
-    onClick={handleSubmit} 
-    variant="outline-success">search
-    </Button>
+      <Button
+        onClick={handleSubmit}
+        variant="outline-success" >search
+      </Button>
     </>
   )
 }

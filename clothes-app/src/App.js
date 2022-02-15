@@ -15,8 +15,9 @@ const App = () => {
 
   const [clothesFiltered, setClothesFiltered] = useState({})
   const [handleToggle, setHandleToggle] = useState(false)
+  const [handleClothesToggle, setHandleClothesToggle] = useState(false)
   const handleToggleResults = (toggle) => {
-    if (handleToggle === false ) {
+    if (handleToggle === false) {
       setHandleToggle(true)
     } else {
       setHandleToggle(false)
@@ -24,19 +25,26 @@ const App = () => {
   }
 
   const getSearchResults = (filteredClothes) => {
-    console.log('logging', filteredClothes)
-    setClothesFiltered(filteredClothes)
+    console.log('filtered', filteredClothes)
+    if (filteredClothes === false) {
+      console.log('No search results')
+      setClothesFiltered({ filtered: 'No search' })
+      setHandleClothesToggle(false)
+    } else {
+      setClothesFiltered(filteredClothes)
+      setHandleClothesToggle(true)
+    }
   }
 
   return (
     <BrowserRouter>
       <Navigation onSearch={handleToggleResults} searchResults={getSearchResults} />
       <Routes>
-        <Route exact path='/search' element={ <Search />} />
-        <Route exact path='/clothes/:id' element={ <ClotheShow />} />
-        {!handleToggle && <Route exact path='/clothes' element={ <ClotheIndex />} />}
-        {handleToggle && <Route exact path='/clothes' element={ <ClotheFilter filtered={clothesFiltered} />} />}
-        <Route exact path='/Home' element={ <Home /> } />
+        <Route exact path='/search' element={<Search />} />
+        <Route exact path='/clothes/:id' element={<ClotheShow />} />
+        {!handleToggle && <Route exact path='/clothes' element={<ClotheIndex />} />}
+        {handleToggle && <Route exact path='/clothes' element={<ClotheFilter filtered={clothesFiltered} />} />}
+        <Route exact path='/Home' element={<Home />} />
       </Routes>
       <Footer />
     </BrowserRouter>
