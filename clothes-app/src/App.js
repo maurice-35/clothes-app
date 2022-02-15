@@ -6,7 +6,6 @@ import ClotheShow from './component/clothes/ClotheShow'
 import Navigation from './component/common/Navigation'
 import Footer from './component/common/Footer'
 import Search from './component/clothes/Search'
-// import ClotheCard from './component/clothes/ClotheCard';
 import ClotheFilter from './component/clothes/ClotheFilter';
 
 
@@ -44,7 +43,7 @@ const App = () => {
         <Route exact path='/clothes/:id' element={<ClotheShow />} />
         {!handleToggle && <Route exact path='/clothes' element={<ClotheIndex />} />}
         {handleToggle && <Route exact path='/clothes' element={<ClotheFilter filtered={clothesFiltered} />} />}
-        <Route exact path='/Home' element={<Home />} />
+        {!handleToggle && <Route exact path='/Home' element={<Home />} />}
       </Routes>
       <Footer />
     </BrowserRouter>
