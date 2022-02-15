@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import ClotheShow from './ClotheShow'
+import { Card } from 'react-bootstrap'
 
 
 const ClotheFilter = (props) => {
@@ -20,7 +21,12 @@ const ClotheFilter = (props) => {
 	return (
 		<>
 			{!clothes ? <p classname='hi'>No results</p> : <div className='hi'>
-				{props.filtered.map(item => item.price)}	</div>}
+				{props.filtered.map(item =>
+					<>
+						<Card.Img variant="top" src={item.img} alt={item.name} />
+						<Card.Title>{item.title}</Card.Title>
+					</>)}
+			</div>}
 		</>
 	)
 }
