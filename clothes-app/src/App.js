@@ -43,7 +43,8 @@ const App = () => {
         <Route exact path='/clothes/:id' element={<ClotheShow />} />
         {!handleToggle && <Route exact path='/clothes' element={<ClotheIndex />} />}
         {handleToggle && <Route exact path='/clothes' element={<ClotheFilter filtered={clothesFiltered} />} />}
-        {!handleToggle && <Route exact path='/Home' element={<Home />} />}
+        {handleToggle && <Route exact path='/Home' element={<ClotheFilter filtered={clothesFiltered} />} />}
+        {!handleToggle && <Route exact path='/Home' element={<Home />} {...handleClothesToggle} />}
       </Routes>
       <Footer />
     </BrowserRouter>

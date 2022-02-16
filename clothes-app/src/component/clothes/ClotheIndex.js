@@ -39,7 +39,7 @@ const ClotheIndex = () => {
 							</CardGroup>
 							:
 							<h2 className="index">
-								{hasError ? 'Something went wrong' : '...loading'}
+								{hasError ? 'Please wait' : '...loading'}
 							</h2>
 						}
 					</Card>
