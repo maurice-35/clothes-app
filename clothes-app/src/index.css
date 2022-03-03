@@ -1,106 +1,162 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 body {
-	background-color: rgba(0, 0, 0, 0.212);
-	font-family: 'Permanent Marker', cursive, sans-serif;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.212);
+  font-family: 'Gloria Hallelujah', cursive;
+  cursor: pointer;
 }
 
 nav.navbar.fixed-top.navbar {
-	background-image: url('https://image.freepik.com/free-vector/botanical-floral-illustration_53876-80418.jpg?w=740');
-	
+  background-image: url("https://image.freepik.com/free-vector/botanical-floral-illustration_53876-80418.jpg?w=740");
 }
 
-a.navbar-brand {
-	font-size: 3em;
+a .container-fluid {
+  background-color: #f3efef;
+  margin: 1rem;
 }
 
-.container-fluid {
-	background-color: #f3efef;
-	margin: 1rem;
+.navbar-brand {
+  font-size: 3em;
 }
 
 .input-group.md-form.form-sm.form-1 {
-	border: 1px solid #bdbdbd;
-	border-top-right-radius: 0.25rem;
-	border-bottom-right-radius: 0.25rem;
-}
-
-.container2 {
-	margin: 5px;
-	align-items: center;
+  border: 1px solid #bdbdbd;
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
 }
 
 .card.body {
-	color: lightblue;
+  color: lightblue;
 }
 
-.card-footer:last-child  {
-	font-size: large;
-	font-style: italic;
-	font-weight: bold;
+.card-footer:last-child {
+  font-size: large;
+  font-style: italic;
+  font-weight: bold;
 }
 
 .container {
-	height: 100vh;
-	margin: 20px auto;
-	background-color: rgb(146, 199, 194);
-	padding: 15px 35px;
-	margin-top: 8.5rem;
-	border-radius: 1.5em;
-	max-width: 70em;
-	background-image: url('https://image.freepik.com/free-vector/pink-floral-patterned-background-vector_53876-85184.jpg?w=740')
+  height: 100vh;
+  margin: 20px auto;
+  background-color: rgb(146, 199, 194);
+  padding: 15px 35px;
+  margin-top: 10.3rem;
+  border-radius: 1.5em;
+  max-width: 70em;
+  background-image: url("https://image.freepik.com/free-vector/pink-floral-patterned-background-vector_53876-85184.jpg?w=740");
+}
+
+.container2 {
+  margin: 0.5rem;
 }
 
 h1 {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-	align-items: center;
-	margin-top: 10em;
-	letter-spacing: 2px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 10em;
+  letter-spacing: 2px;
 }
 
 div span.logo-emoji {
-	font-size: 3em;
+  font-size: 3em;
 }
 
 #button {
-	display: flex;
-	width: 6rem;
-	color: #196403
-
+  display: flex;
+  width: 6rem;
+  color: #196403;
 }
 
 .footer {
-	width: 100vw;
-	background-color: #f3efef;
-	justify-content: space-evenly;
-	background-image: url('https://image.freepik.com/free-vector/botanical-floral-illustration_53876-80418.jpg?w=740');
+  width: 100vw;
+  background-color: #f3efef;
+  justify-content: space-evenly;
+  background-image: url("https://image.freepik.com/free-vector/botanical-floral-illustration_53876-80418.jpg?w=740");
 }
 
 p.footer-icon {
-	font-size: 3em;
+  font-size: 3em;
 }
 
 div.col {
-	display: grid;
-	justify-content: center;
-	padding-top: 2rem;
-	margin: 2rem;
-	background-image: url('https://image.freepik.com/free-vector/stylish-hexagonal-line-pattern-background_1017-19742.jpg?w=900');
+  display: grid;
+  justify-content: center;
+  padding-top: 2rem;
+  margin: 2rem;
+  background-image: url("https://image.freepik.com/free-vector/stylish-hexagonal-line-pattern-background_1017-19742.jpg?w=900");
 }
 
 div#dress-map.card {
-	display: grid; 
-	align-items: center;
-	grid-template-columns: repeat(3, 1fr); 
-	grid-gap: 2rem;
-	background-image: url('https://image.freepik.com/free-vector/stylish-hexagonal-line-pattern-background_1017-19742.jpg?w=900');
-	padding-top: 10rem;
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  background-image: url("https://image.freepik.com/free-vector/stylish-hexagonal-line-pattern-background_1017-19742.jpg?w=900");
+  padding-top: 10rem;
 }
 
 input.form-control.my-0.py-1 {
-	font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Rye', cursive;
 }
 
 .hi {
-	font-size: 20px;
+  font-size: 20px;
+}
+
+@media (max-width: 600px) {
+  div#dress-map.card {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0.2rem;
+    padding-top: 9rem;
+  }
+	.container2 {
+		margin: 2px;
+		margin-left: 8px;
+	}
+	.container2 img.card-img-top {
+		width: 45vw;
+	}
+	div.col.card-img-top {
+    width: 100vw;
+  }
+
+  .card-title.h5 {
+    font-size: 1em;
+  }
+  nav.navbar.fixed-top.navbar {
+    height: 12rem;
+    width: 100vw;
+		margin-top: -2.5rem;
+  }
+  .navbar-brand {
+    font-size: 2em;
+  }
+  div.col {
+    padding-top: 6.5rem;
+  }
+	#popover-contained {
+		width: 50%;
+	}
+  .container-fluid {
+    height: 8rem;
+    margin-top: 0.5rem;
+    font-size: 0.9em;
+  }s
+  input.form-control.my-0.py-1 {
+    font-size: 1em;
+		width: 30%;
+  }
+  .container {
+    margin-top: 8.7rem;
+  }
+  .footer {
+    width: 100vw;
+    margin-top: -1.5rem;
+  }
 }
