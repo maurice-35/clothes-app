@@ -6,10 +6,10 @@ const ClotheCard = ({ id, img, title, name }) => {
 
 	return (
 		<div className="container2">
+			<Link to={`/clothes/${id}`}>
 				<Card.Img variant="top" src={img} alt={name} />
-				<Link to={`/clothes/${id}`}>
 				<Card.Body>
-					<Card.Title>{title}</Card.Title>			
+					<Card.Title>{title}</Card.Title>
 				</Card.Body>
 			</Link>
 		</div>

@@ -6,9 +6,7 @@ import Search from '../clothes/Search'
 
 
 
-
-
-const Navigation = (props) => {
+const Navigation = (props, id, img) => {
 	const [search, setSearch] = useState([])
 	const [filteredData, setFilteredData] = useState(search)
 
@@ -24,7 +22,7 @@ const Navigation = (props) => {
 			}
 		}
 		getData()
-	}, [])
+	})
 
 
 	const handleSearch = (event) => {
@@ -33,7 +31,6 @@ const Navigation = (props) => {
 		} else {
 			let value = event.target.value.toUpperCase()
 			let result = []
-			console.log(value)
 			result = search.filter((data) => {
 				return data.title.search(value) !== -1
 			})
@@ -43,10 +40,8 @@ const Navigation = (props) => {
 			} else {
 				props.searchResults(result)
 			}
-			console.log('result', result.length)
 		}
 	}
-
 
 	return (
 		<Navbar expand="lg">
@@ -70,10 +65,10 @@ const Navigation = (props) => {
 								placeholder="Search" arial-label="Search" />
 						</div>
 						<div>
-							<Search onSearch={props.onSearch} />
-							{filteredData.map((filter) => (
-								<Card key={filter.id}>{filter.title}</Card>
-							))}
+								<Search onSearch={props.onSearch} />
+								{filteredData.map((filter) => (
+									<Card key={filter.id}> {filter.title}</Card>
+								))}
 						</div>
 					</MDBCol>
 					<Nav.Link href="/Home">Home</Nav.Link>

@@ -17,7 +17,6 @@ const ClotheShow = () => {
 		const getData = async () => {
 			try {
 				const { data } = await axios.get(`https://5fd9d76f6cf2e7001737ead3.mockapi.io/api/v1/dress/${id}`)
-				console.log('Data', data)
 				setClothe(data)
 			} catch (err) {
 			}
@@ -31,7 +30,6 @@ const ClotheShow = () => {
 	}
 
 
-	console.log('clothe', clothe)
 	return (
 		<section>
 			<div>

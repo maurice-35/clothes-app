@@ -12,12 +12,11 @@ const Search = (props) => {
     props.onSearch('hi')
   }
 
-
   return (
     <>
       <Button
         onClick={handleSubmit}
-        variant="outline-success" >search
+        variant="outline-success">search
       </Button>
     </>
   )

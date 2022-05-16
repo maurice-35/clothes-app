@@ -24,7 +24,6 @@ const App = () => {
   }
 
   const getSearchResults = (filteredClothes) => {
-    console.log('filtered', filteredClothes)
     if (filteredClothes === false) {
       console.log('No search results')
       setClothesFiltered({ filtered: 'No search' })

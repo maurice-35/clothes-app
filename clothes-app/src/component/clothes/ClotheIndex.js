@@ -8,7 +8,6 @@ import ClotheCard from './ClotheCard'
 const ClotheIndex = () => {
 	const [dress, setDress] = useState([])
 	const [hasError, setHasError] = useState(false)
-	console.log('clothes index')
 
 
 	useEffect(() => {
