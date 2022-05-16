@@ -14,6 +14,7 @@ const ClotheFilter = (props) => {
 	useEffect(() => {
 		if (props.filtered.filtered === 'No matched searches') {
 			setClothes(false)
+			console.log('Here')
 		} else {
 			setClothes(props.filtered)
 		}
@@ -24,6 +25,7 @@ const ClotheFilter = (props) => {
 		setShow(!show)
 		setTarget(event.target)
 	}
+
 
 	return (
 		<section>

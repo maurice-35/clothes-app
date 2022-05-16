@@ -6,7 +6,7 @@ import Search from '../clothes/Search'
 
 
 
-const Navigation = (props, id, img) => {
+const Navigation = (props) => {
 	const [search, setSearch] = useState([])
 	const [filteredData, setFilteredData] = useState(search)
 
@@ -65,10 +65,10 @@ const Navigation = (props, id, img) => {
 								placeholder="Search" arial-label="Search" />
 						</div>
 						<div>
-								<Search onSearch={props.onSearch} />
-								{filteredData.map((filter) => (
-									<Card key={filter.id}> {filter.title}</Card>
-								))}
+							<Search onSearch={props.onSearch} />
+							{filteredData.map((filter) => (
+								<Card key={filter.id}> {filter.title}</Card>
+							))}
 						</div>
 					</MDBCol>
 					<Nav.Link href="/Home">Home</Nav.Link>

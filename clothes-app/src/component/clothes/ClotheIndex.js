@@ -30,11 +30,11 @@ const ClotheIndex = () => {
 					<Card>
 						{dress ?
 							<CardGroup>
-							<Card id="dress-map">
-								{dress.map(clothe => (
-									<ClotheCard key={clothe.id} {...clothe} />
-								))}
-							</Card>
+								<Card id="dress-map">
+									{dress.map(clothe => (
+										<ClotheCard key={clothe.id} {...clothe} />
+									))}
+								</Card>
 							</CardGroup>
 							:
 							<h2 className="index">
