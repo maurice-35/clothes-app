@@ -48,20 +48,11 @@ const Navigation = (props) => {
           <Navbar.Brand href="/Home">👗</Navbar.Brand>
           <Nav.Link href="/clothes">Clothes</Nav.Link>
           <MDBCol md="4">
-            <div
-              className="input-group md-form form-sm form-1 pl-0"
-              {...filteredData.map((value, index) => {
-                return (
-                  <div>
-                    <div key={value.id} />
-                  </div>
-                );
-              })}
-            >
+            <div>
               <div className="input-group-prepend" />
               <input
                 className="form-control my-0 py-1"
-                type="text"
+                type="search"
                 onChange={(event) => handleSearch(event)}
                 placeholder="Search"
                 arial-label="Search"
@@ -70,7 +61,14 @@ const Navigation = (props) => {
             <div>
               <Search onSearch={props.onSearch} />
               {filteredData.map((filter) => (
-                <Card key={filter.id}> {filter.title}</Card>
+                <a
+                  key={filter.id}
+                  href="/clothes/:id"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <Card>{filter.title}</Card>
+                </a>
               ))}
             </div>
           </MDBCol>

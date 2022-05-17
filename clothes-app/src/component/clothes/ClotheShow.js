@@ -35,8 +35,8 @@ const ClotheShow = () => {
           <Card.Body>
             <Card.Title>{clothe.title}</Card.Title>
             <div>
-              <Card.Text>
-                <div ref={ref}>
+              <div ref={ref}>
+                <Card.Text>
                   Description
                   <Button
                     variant="outline-success"
@@ -59,8 +59,8 @@ const ClotheShow = () => {
                       </Popover.Body>
                     </Popover>
                   </Overlay>
-                </div>
-              </Card.Text>
+                </Card.Text>
+              </div>
             </div>
           </Card.Body>
           <Card.Footer>

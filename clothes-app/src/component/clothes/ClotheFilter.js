@@ -27,17 +27,17 @@ const ClotheFilter = (props) => {
       <div>
         <Col>
           {!clothes ? (
-            <p classname="hi">No results</p>
+            <div className="hi">No results</div>
           ) : (
             <div className="hi">
               {props.filtered.map((item) => (
-                <>
+                <div key={item.id}>
                   <Card.Img variant="top" src={item.img} alt={item.name} />
                   <Card.Body>
                     <Card.Title>{item.title}</Card.Title>
                     <div>
-                      <Card.Text>
-                        <div ref={ref}>
+                      <div ref={ref}>
+                        <Card.Text>
                           Description
                           <Button
                             variant="outline-success"
@@ -60,8 +60,8 @@ const ClotheFilter = (props) => {
                               </Popover.Body>
                             </Popover>
                           </Overlay>
-                        </div>
-                      </Card.Text>
+                        </Card.Text>
+                      </div>
                     </div>
                   </Card.Body>
                   <Card.Footer>
@@ -73,7 +73,7 @@ const ClotheFilter = (props) => {
                     <br />
                     <small className="text">Comment: {item.comment}</small>
                   </Card.Footer>
-                </>
+                </div>
               ))}
             </div>
           )}
