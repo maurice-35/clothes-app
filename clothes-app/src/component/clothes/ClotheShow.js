@@ -33,7 +33,7 @@ const ClotheShow = () => {
         <Col>
           <Card.Img variant="top" src={clothe.img} alt={clothe.name} />
           <Card.Body>
-            <Card.Title>{clothe.title}</Card.Title>
+            <Card.Title id="show">{clothe.title}</Card.Title>
             <div>
               <div ref={ref}>
                 <Card.Text>

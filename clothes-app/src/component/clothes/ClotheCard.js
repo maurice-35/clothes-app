@@ -8,7 +8,7 @@ const ClotheCard = ({ id, img, title, name }) => {
       <Link to={`/clothes/${id}`}>
         <Card.Img variant="top" src={img} alt={name} />
         <Card.Body>
-          <Card.Title>{title}</Card.Title>
+          <Card.Title id="show">{title}</Card.Title>
         </Card.Body>
       </Link>
     </div>

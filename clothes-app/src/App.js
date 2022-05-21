@@ -6,6 +6,7 @@ import ClotheShow from './component/clothes/ClotheShow'
 import Navigation from './component/common/Navigation'
 import Footer from './component/common/Footer'
 import Search from './component/clothes/Search'
+// import SearchResults from './component/clothes/SearchResults'
 import ClotheFilter from './component/clothes/ClotheFilter';
 
 
@@ -39,11 +40,12 @@ const App = () => {
       <Navigation onSearch={handleToggleResults} searchResults={getSearchResults} />
       <Routes>
         <Route exact path='/search' element={<Search />} />
+        {/* {handleToggle &&<Route exact path='/clothes:id' element={<SearchResults filtered={clothesFiltered} />} />} */}
         <Route exact path='/clothes/:id' element={<ClotheShow />} />
         {!handleToggle && <Route exact path='/clothes' element={<ClotheIndex />} />}
         {handleToggle && <Route exact path='/clothes' element={<ClotheFilter filtered={clothesFiltered} />} />}
-        {handleToggle && <Route exact path='/Home' element={<ClotheFilter filtered={clothesFiltered} />} />}
-        {!handleToggle && <Route exact path='/Home' element={<Home />} {...handleClothesToggle} />}
+        {handleToggle && <Route exact path='/' element={<ClotheFilter filtered={clothesFiltered} />} />}
+        {!handleToggle && <Route exact path='/' element={<Home />} {...handleClothesToggle} />}
       </Routes>
       <Footer />
     </BrowserRouter>

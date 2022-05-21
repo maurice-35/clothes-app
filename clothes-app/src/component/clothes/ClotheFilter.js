@@ -34,7 +34,7 @@ const ClotheFilter = (props) => {
                 <div key={item.id}>
                   <Card.Img variant="top" src={item.img} alt={item.name} />
                   <Card.Body>
-                    <Card.Title>{item.title}</Card.Title>
+                    <Card.Title id="filter">{item.title}</Card.Title>
                     <div>
                       <div ref={ref}>
                         <Card.Text>
