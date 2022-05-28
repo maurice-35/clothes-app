@@ -16,7 +16,6 @@ const Navigation = (props) => {
           "https://5fd9d76f6cf2e7001737ead3.mockapi.io/api/v1/dress"
         );
         setSearch(data);
-        filteredData(data);
       } catch (error) {
         console.log(error);
       }
@@ -42,6 +41,7 @@ const Navigation = (props) => {
     }
   };
 
+
   return (
     <Navbar expand="lg">
       <nav className="navbar fixed-top navbar-light bg-light">
@@ -54,8 +54,9 @@ const Navigation = (props) => {
               <input
                 className="form-control my-0 py-1"
                 type="search"
+                name="search"
                 onChange={(event) => handleSearch(event)}
-                placeholder="Search"
+                placeholder="Search..."
                 arial-label="Search"
               />
             </div>

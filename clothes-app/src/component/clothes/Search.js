@@ -13,6 +13,8 @@ const Search = (props) => {
   return (
     <>
       <Button
+        type="submit"
+        id="submit"
         onClick={handleSubmit}
         variant="outline-success">search
       </Button>
