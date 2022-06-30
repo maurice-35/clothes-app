@@ -5,9 +5,13 @@
 }
 body {
   position: relative;
-  background-color: rgba(0, 0, 0, 0.212);
+  background-color: brown;
   font-family: 'Gloria Hallelujah', cursive;
-  cursor: pointer;
+  cursor: pointer; 
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 5000px;
+  border: 15px solid;
+  border-image: url('https://media.istockphoto.com/photos/flag-on-wavy-fabric-picture-id1355845420?k=20&m=1355845420&s=612x612&w=0&h=MWjR2tlY48FAqJoW0PRM_t_8EO3FwLwWahnfo2_sbGc=') 30 / 15px / 0px stretch;
 }
 
 nav.navbar.fixed-top.navbar {
@@ -114,6 +118,7 @@ div span.logo-emoji {
   background-color: #f3efef;
   justify-content: space-evenly;
   background-image: url("https://image.freepik.com/free-vector/botanical-floral-illustration_53876-80418.jpg?w=740");
+  transform: skew(3.3deg, 3deg);
 }
 
 p.footer-icon {
@@ -143,6 +148,11 @@ input.form-control.my-0.py-1 {
 
 .hi {
   font-size: 20px;
+}
+
+svg {
+  width: 40px;
+  background-color: green;
 }
 
 @media (max-width: 600px) {
@@ -183,7 +193,7 @@ input.form-control.my-0.py-1 {
     height: 8rem;
     margin-top: 0.5rem;
     font-size: 0.9em;
-  }s
+  }
   input.form-control.my-0.py-1 {
     font-size: 1em;
 		width: 30%;
@@ -194,5 +204,9 @@ input.form-control.my-0.py-1 {
   .footer {
     width: 100vw;
     margin-top: -1.5rem;
+  }
+  svg {
+    width: 25px;
+    padding-right: 10%;
   }
 }

@@ -65,9 +65,7 @@ const Navigation = (props) => {
               {filteredData.map((filter) => (
                 <a
                   key={filter.id}
-                  href="/clothes/:id"
-                  target="_blank"
-                  rel="noreferrer"
+                  href="/clothes"
                 >
                   <Card>{filter.title}</Card>
                 </a>
