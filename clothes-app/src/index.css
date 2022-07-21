@@ -1,27 +1,15 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
 body {
   position: relative;
-  background-color: brown;
+  background-color: #ced4da;
   font-family: 'Gloria Hallelujah', cursive;
-  cursor: pointer; 
   content-visibility: auto;
-  contain-intrinsic-size: 1px 5000px;
   border: 15px solid;
   border-image: url('https://media.istockphoto.com/photos/flag-on-wavy-fabric-picture-id1355845420?k=20&m=1355845420&s=612x612&w=0&h=MWjR2tlY48FAqJoW0PRM_t_8EO3FwLwWahnfo2_sbGc=') 30 / 15px / 0px stretch;
 }
 
-nav.navbar.fixed-top.navbar {
+.navbar {
   background-image: url("https://image.freepik.com/free-vector/botanical-floral-illustration_53876-80418.jpg?w=740");
   animation: pulse 5s infinite;
-}
-
-a .container-fluid {
-  background-color: #f3efef;
-  margin: 1rem;
 }
 
 .container-fluid {
@@ -30,16 +18,7 @@ a .container-fluid {
 
 .navbar-brand {
   font-size: 3em;
-}
-
-.input-group.md-form.form-sm.form-1 {
-  border: 1px solid #bdbdbd;
-  border-top-right-radius: 0.25rem;
-  border-bottom-right-radius: 0.25rem;
-}
-
-.card.body {
-  color: lightblue;
+  cursor: pointer; 
 }
 
 .card-footer:last-child {
@@ -56,10 +35,6 @@ a .container-fluid {
   border-radius: 1.5em;
   max-width: 70em;
   animation: pulse 5s infinite;
-}
-
-.container2 {
-  overflow: hidden;
 }
 
 #show {
@@ -103,7 +78,7 @@ h1 {
   letter-spacing: 2px;
 }
 
-div span.logo-emoji {
+.logo-emoji {
   font-size: 3em;
 }
 
@@ -113,11 +88,15 @@ div span.logo-emoji {
   color: #196403;
 }
 
+svg {
+  border-radius: 30%;
+  background-color: green;
+}
+
 .footer {
   width: 100vw;
   background-color: #f3efef;
   justify-content: space-evenly;
-  background-image: url("https://image.freepik.com/free-vector/botanical-floral-illustration_53876-80418.jpg?w=740");
   transform: skew(3.3deg, 3deg);
 }
 
@@ -125,7 +104,7 @@ p.footer-icon {
   font-size: 3em;
 }
 
-div.col {
+.col {
   display: grid;
   justify-content: center;
   padding-top: 2rem;
@@ -133,7 +112,7 @@ div.col {
   background-image: url("https://image.freepik.com/free-vector/stylish-hexagonal-line-pattern-background_1017-19742.jpg?w=900");
 }
 
-div#dress-map.card {
+#dress-map.card {
   display: grid;
   align-items: center;
   grid-template-columns: repeat(3, 1fr);
@@ -142,25 +121,21 @@ div#dress-map.card {
   padding-top: 10rem;
 }
 
-input.form-control.my-0.py-1 {
+.card-image-top {
+  cursor: pointer; 
+}
+
+.form-control {
   font-family: 'Rye', cursive;
 }
 
-.hi {
-  font-size: 20px;
-}
-
-svg {
-  width: 40px;
-  background-color: green;
-}
-
 @media (max-width: 600px) {
-  div#dress-map.card {
+#dress-map.card {
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 0.2rem;
-    padding-top: 9rem;
+    grid-gap: 0.2em;
+    padding-top: 0.5em;
   }
+
 	.container2 {
 		margin: 2px;
 		margin-left: 8px;
@@ -168,22 +143,19 @@ svg {
 	.container2 img.card-img-top {
 		width: 45vw;
 	}
-	div.col.card-img-top {
-    width: 100vw;
-  }
 
-  .card-title.h5 {
+  .h5 {
     font-size: 1em;
   }
-  nav.navbar.fixed-top.navbar {
+  .navbar {
     height: 12rem;
     width: 100vw;
-		margin-top: -2.5rem;
+		margin-top: -2rem;
   }
   .navbar-brand {
     font-size: 2em;
   }
-  div.col {
+  .col {
     padding-top: 6.5rem;
   }
 	#popover-contained {
@@ -194,9 +166,9 @@ svg {
     margin-top: 0.5rem;
     font-size: 0.9em;
   }
-  input.form-control.my-0.py-1 {
-    font-size: 1em;
-		width: 30%;
+  .form-control {
+    font-size: 0.75rem;
+		width: 60%;
   }
   .container {
     margin-top: 8.7rem;
@@ -205,8 +177,8 @@ svg {
     width: 100vw;
     margin-top: -1.5rem;
   }
-  svg {
-    width: 25px;
-    padding-right: 10%;
+
+  p.footer-icon {
+    padding-bottom: 1em;
   }
 }

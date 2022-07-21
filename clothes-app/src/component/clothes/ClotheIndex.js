@@ -23,28 +23,30 @@ const ClotheIndex = () => {
   }, []);
 
   return (
-    <div>
-      <Row className="grid-container">
-        <CardGroup>
-          <Card>
-            {dress.length > 0 ? (
-              <CardGroup>
-                <Card id="dress-map">
-                  {dress.map((clothe) => (
-                    <ClotheCard key={clothe.id} {...clothe} />
-                  ))}
-                </Card>
-              </CardGroup>
-            ) : (
-              <h2 className="index">
-                {hasError ? "Please wait" : "...loading"}
-              </h2>
-            )}
-          </Card>
-        </CardGroup>
-      </Row>
-      <ScrollToTop smooth />
-    </div>
+    <section>
+      <div>
+        <Row className="grid-container">
+          <CardGroup>
+            <Card>
+              {dress.length > 0 ? (
+                <CardGroup>
+                  <Card id="dress-map">
+                    {dress.map((clothe) => (
+                      <ClotheCard key={clothe.id} {...clothe} />
+                    ))}
+                  </Card>
+                </CardGroup>
+              ) : (
+                <h2 className="index">
+                  {hasError ? "Please wait" : "...loading"}
+                </h2>
+              )}
+            </Card>
+          </CardGroup>
+        </Row>
+        <ScrollToTop smooth />
+      </div>
+    </section>
   );
 };
 
