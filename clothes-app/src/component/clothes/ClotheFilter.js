@@ -32,7 +32,7 @@ const ClotheFilter = (props) => {
             <div className="hi">
               {props.filtered.map((item) => (
                 <div key={item.id}>
-                  <Card.Img variant="top" src={item.img} alt={item.name} />
+                  <Card.Img variant="top" src={item.image} alt={item.name} />
                   <Card.Body>
                     <Card.Title id="filter">{item.title}</Card.Title>
                     <div>
@@ -67,11 +67,11 @@ const ClotheFilter = (props) => {
                   <Card.Footer>
                     <small className="text">Name: {item.name}</small>
                     <br />
-                    <small className="text">User Name: {item.userName}</small>
+                    <small className="text">User Name: {item.category}</small>
                     <br />
                     <small className="text">Price: £{item.price}</small>
                     <br />
-                    <small className="text">Comment: {item.comment}</small>
+                    <small className="text">Rate: {item.rating ? item.rating.rate: ""}</small>
                   </Card.Footer>
                 </div>
               ))}

@@ -4,7 +4,6 @@ import { MDBCol } from "mdbreact";
 import axios from "axios";
 import Search from "../clothes/Search";
 
-
 const Navigation = (props) => {
   const [search, setSearch] = useState([]);
   const [filteredData, setFilteredData] = useState(search);
@@ -13,7 +12,7 @@ const Navigation = (props) => {
     const getData = async () => {
       try {
         const { data } = await axios.get(
-          "https://5fd9d76f6cf2e7001737ead3.mockapi.io/api/v1/dress"
+          "https://fakestoreapi.com/products"
         );
         setSearch(data);
       } catch (error) {
@@ -65,7 +64,7 @@ const Navigation = (props) => {
               {filteredData.map((filter) => (
                 <a
                   key={filter.id}
-                  href="/clothes"
+                  href='/clothes'
                 >
                   <Card>{filter.title}</Card>
                 </a>

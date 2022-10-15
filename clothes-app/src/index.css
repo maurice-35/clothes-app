@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   position: relative;
   background-color: #ced4da;
@@ -19,6 +23,10 @@ body {
 .navbar-brand {
   font-size: 3em;
   cursor: pointer; 
+}
+
+.show-item {
+  padding-top: 10rem;
 }
 
 .card-footer:last-child {
@@ -49,7 +57,7 @@ body {
 }
 
 img {
-  transition: transform 1s;
+  transition: transform 0.5s;
 }
 
 .container2:hover img {
@@ -76,6 +84,7 @@ h1 {
   align-items: center;
   margin-top: 10em;
   letter-spacing: 2px;
+  font-weight: bold;
 }
 
 .logo-emoji {
@@ -168,10 +177,11 @@ p.footer-icon {
   }
   .form-control {
     font-size: 0.75rem;
-		width: 60%;
+		width: 85%;
   }
   .container {
-    margin-top: 8.7rem;
+    margin-top: 2.7rem;
+    margin-bottom:4rem;
   }
   .footer {
     width: 100vw;

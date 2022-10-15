@@ -14,7 +14,7 @@ const ClotheShow = () => {
     const getData = async () => {
       try {
         const { data } = await axios.get(
-          `https://5fd9d76f6cf2e7001737ead3.mockapi.io/api/v1/dress/${id}`
+          `https://fakestoreapi.com/products/${id}`
         );
         setClothe(data);
       } catch (err) {}
@@ -29,9 +29,9 @@ const ClotheShow = () => {
 
   return (
     <section>
-      <div>
+      <div className="show-item">
         <Col>
-          <Card.Img variant="top" src={clothe.img} alt={clothe.name} />
+          <Card.Img variant="top" src={clothe.image} alt={clothe.name} />
           <Card.Body>
             <Card.Title id="show">{clothe.title}</Card.Title>
             <div>
@@ -64,13 +64,13 @@ const ClotheShow = () => {
             </div>
           </Card.Body>
           <Card.Footer>
-            <small className="text">Name: {clothe.name}</small>
-            <br />
-            <small className="text">User Name: {clothe.userName}</small>
+            <small className="text">Category: {clothe.category}</small>
             <br />
             <small className="text">Price: £{clothe.price}</small>
             <br />
-            <small className="text">Comment: {clothe.comment}</small>
+            <small className="text">Rate: {clothe.rating ? clothe.rating.rate: ""}</small>
+            <br />
+            <small className="text">Count: {clothe.rating ? clothe.rating.count: ""}</small>
           </Card.Footer>
         </Col>
       </div>

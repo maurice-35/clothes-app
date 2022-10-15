@@ -3,7 +3,6 @@ import { Button } from 'react-bootstrap'
 
 
 const Search = (props) => {
-
   const handleSubmit = (event) => {
     event.preventDefault()
     console.log(event.target.title.value)

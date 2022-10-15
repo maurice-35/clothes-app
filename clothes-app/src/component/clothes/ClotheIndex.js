@@ -12,7 +12,7 @@ const ClotheIndex = () => {
     const getData = async () => {
       try {
         const { data } = await axios.get(
-          "https://5fd9d76f6cf2e7001737ead3.mockapi.io/api/v1/dress"
+          "https://fakestoreapi.com/products"
         );
         setDress(data);
       } catch (err) {
